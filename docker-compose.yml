@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  minecraft:
+    # cmd: docker-compose exec minecraft rcon-cli
+    image: itzg/minecraft-server
+    restart: always
+    tty: true
+    stdin_open: true
+    environment:
+      VERSION: "1.18.2"
+      SERVER_NAME: "Not This Shit"
+      MOTD: "Ah shit, here we go again"
+      # MAX_BUILD_HEIGHT: 256
+      VIEW_DISTANCE: 20
+      MAX_PLAYERS: 20
+      MAX_WORLD_SIZE: 10000
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
+      FORCE_GAMEMODE: "TRUE"
+      SPAWN_PROTECTION: 0
+
+      # https://github.com/itzg/docker-minecraft-server#whitelist-players=
+      # WHITELIST_FILE: /extra/whitelist.json
+      ENABLE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "TRUE"
+
+      OPS: Huskydog9988
+      OVERRIDE_OPS: "TRUE"
+
+      ICON: https://i.kym-cdn.com/entries/icons/mobile/000/029/223/cover2.jpg
+      OVERRIDE_ICON: "TRUE"
+
+      MAX_MEMORY: 2G
+      TZ: America/New_York
+      ENABLE_ROLLING_LOGS: "TRUE"
+      USE_AIKAR_FLAGS: "TRUE"
+      VANILLATWEAKS_SHARECODE: p70HvM
+
+      TYPE: PAPER
+      EULA: "TRUE"
+      SYNC_SKIP_NEWER_IN_DESTINATION: "FALSE"
+    ports:
+      # Java
+      - "25565:25565"
+      # Voice Chat
+      - "24454:24454/udp"
+      # Geyser
+      # - "19132:19132/udp"
+    volumes:
+      # main volume for mc data
+      - "mcdata:/data"
+      # volume for adding plugins
+      - "./plugins:/plugins"
+
+  backups:
+    image: itzg/mc-backup
+    restart: always
+    environment:
+      BACKUP_INTERVAL: "6h"
+      PAUSE_IF_NO_PLAYERS: "FALSE"
+      PRUNE_BACKUPS_DAYS: "7"
+    volumes:
+      # mount the same volume used by server, but read-only
+      - mcdata:/data:ro
+      # use a host attached directory so that it in turn can be backed up
+      # to external/cloud storage
+      - ./mc-backups:/backups
+      # share network namespace with server to simplify rcon access
+    network_mode: "service:minecraft"
+    depends_on:
+      - minecraft
+
+volumes:
+  mcdata:
