@@ -1,2 +1,6 @@
 # Env files
 .env
+
+# Minecraft dirs
+plugins/
+mc-backups/
