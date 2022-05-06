@@ -30,6 +30,9 @@ services:
       ICON: https://i.kym-cdn.com/entries/icons/mobile/000/029/223/cover2.jpg
       OVERRIDE_ICON: "TRUE"
 
+      MODS_FILE: /extras/plugins.txt
+      REMOVE_OLD_MODS: "TRUE"
+
       MAX_MEMORY: 2G
       TZ: America/New_York
       ENABLE_ROLLING_LOGS: "TRUE"
@@ -51,6 +54,8 @@ services:
       - "mcdata:/data"
       # volume for adding plugins
       - "./plugins:/plugins"
+      # extras
+      - "./extras:/extras"
 
   backups:
     image: itzg/mc-backup
