@@ -4,3 +4,6 @@
 # Minecraft dirs
 plugins/
 mc-backups/
+
+# testing dir
+mcdata/
