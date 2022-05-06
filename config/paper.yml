@@ -98,8 +98,8 @@ settings:
   async-chunks:
     threads: -1
   unsupported-settings:
-    allow-permanent-block-break-exploits: false
-    allow-piston-duplication: false
+    allow-permanent-block-break-exploits: true
+    allow-piston-duplication: true
     perform-username-validation: true
     allow-headless-pistons: false
     allow-permanent-block-break-exploits-readme:
