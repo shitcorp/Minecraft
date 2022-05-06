@@ -39,6 +39,7 @@ services:
       ENABLE_ROLLING_LOGS: "TRUE"
       USE_AIKAR_FLAGS: "TRUE"
       VANILLATWEAKS_SHARECODE: p70HvM
+      COPY_CONFIG_DEST: /data
 
       TYPE: PAPER
       EULA: "TRUE"
@@ -57,6 +58,8 @@ services:
       - "./plugins:/plugins"
       # extras
       - "./extras:/extras"
+      # config
+      - "./config:/config"
 
   backups:
     image: itzg/mc-backup
