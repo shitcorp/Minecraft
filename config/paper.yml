@@ -6,9 +6,9 @@
 # join us in our Discord or IRC channel.
 #
 # Discord: https://discord.gg/papermc
-# IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
-# Website: https://papermc.io/ 
-# Docs: https://docs.papermc.io/ 
+# IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper )
+# Website: https://papermc.io/
+# Docs: https://docs.papermc.io/
 
 verbose: false
 timings:
@@ -17,9 +17,9 @@ timings:
   url: https://timings.aikar.co/
   server-name-privacy: false
   hidden-config-entries:
-  - database
-  - settings.bungeecord-addresses
-  - settings.velocity-support.secret
+    - database
+    - settings.bungeecord-addresses
+    - settings.velocity-support.secret
   history-interval: 300
   history-length: 3600
   server-name: Unknown Server
@@ -27,10 +27,11 @@ messages:
   kick:
     flying-player: Flying is not enabled on this server
     flying-vehicle: Flying is not enabled on this server
-    authentication-servers-down: ''
+    authentication-servers-down: ""
     connection-throttle: Connection throttled! Please wait before reconnecting.
-  no-permission: '&cI''m sorry, but you do not have permission to perform this command.
-    Please contact the server administrators if you believe that this is in error.'
+  no-permission:
+    "&cI'm sorry, but you do not have permission to perform this command.
+    Please contact the server administrators if you believe that this is in error."
 config-version: 26
 settings:
   fix-target-selector-tag-completion: true
@@ -53,11 +54,11 @@ settings:
   save-empty-scoreboard-teams: false
   bungee-online-mode: true
   incoming-packet-spam-threshold: 300
-  use-alternative-luck-formula: false
+  use-alternative-luck-formula: true
   velocity-support:
     enabled: false
     online-mode: false
-    secret: ''
+    secret: ""
   console-has-all-permissions: false
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
@@ -101,16 +102,19 @@ settings:
     allow-piston-duplication: false
     perform-username-validation: true
     allow-headless-pistons: false
-    allow-permanent-block-break-exploits-readme: This setting controls if players
+    allow-permanent-block-break-exploits-readme:
+      This setting controls if players
       should be able to break bedrock, end portals and other intended to be permanent
       blocks.
-    allow-piston-duplication-readme: This setting controls if player should be able
+    allow-piston-duplication-readme:
+      This setting controls if player should be able
       to use TNT duplication, but this also allows duplicating carpet, rails and potentially
       other items
-    allow-headless-pistons-readme: This setting controls if players should be able
+    allow-headless-pistons-readme:
+      This setting controls if players should be able
       to create headless pistons.
   packet-limiter:
-    kick-message: '&cSent too many packets'
+    kick-message: "&cSent too many packets"
     limits:
       all:
         interval: 7.0
@@ -181,8 +185,8 @@ world-settings:
     piglins-guard-chests: true
     should-remove-dragon: false
     max-auto-save-chunks-per-tick: 24
-    baby-zombie-movement-modifier: 0.5
-    optimize-explosions: false
+    baby-zombie-movement-modifier: 0.25
+    optimize-explosions: true
     use-vanilla-world-scoreboard-name-coloring: false
     game-mechanics:
       scan-for-legacy-ender-dragon: true
@@ -225,10 +229,10 @@ world-settings:
       spawn-chance-max: 75
     door-breaking-difficulty:
       zombie:
-      - HARD
+        - HARD
       vindicator:
-      - NORMAL
-      - HARD
+        - NORMAL
+        - HARD
     filter-nbt-data-from-spawn-eggs-and-related: true
     max-entity-collisions: 8
     disable-creeper-lingering-effect: false
@@ -236,7 +240,7 @@ world-settings:
     duplicate-uuid-saferegen-delete-range: 32
     hopper:
       cooldown-when-full: true
-      disable-move-event: false
+      disable-move-event: true
       ignore-occluding-blocks: false
     mob-effects:
       undead-immune-to-certain-effects: true
@@ -277,31 +281,31 @@ world-settings:
       lava-obscures: false
       use-permission: false
       hidden-blocks:
-      - copper_ore
-      - deepslate_copper_ore
-      - gold_ore
-      - deepslate_gold_ore
-      - iron_ore
-      - deepslate_iron_ore
-      - coal_ore
-      - deepslate_coal_ore
-      - lapis_ore
-      - deepslate_lapis_ore
-      - mossy_cobblestone
-      - obsidian
-      - chest
-      - diamond_ore
-      - deepslate_diamond_ore
-      - redstone_ore
-      - deepslate_redstone_ore
-      - clay
-      - emerald_ore
-      - deepslate_emerald_ore
-      - ender_chest
+        - copper_ore
+        - deepslate_copper_ore
+        - gold_ore
+        - deepslate_gold_ore
+        - iron_ore
+        - deepslate_iron_ore
+        - coal_ore
+        - deepslate_coal_ore
+        - lapis_ore
+        - deepslate_lapis_ore
+        - mossy_cobblestone
+        - obsidian
+        - chest
+        - diamond_ore
+        - deepslate_diamond_ore
+        - redstone_ore
+        - deepslate_redstone_ore
+        - clay
+        - emerald_ore
+        - deepslate_emerald_ore
+        - ender_chest
       replacement-blocks:
-      - stone
-      - oak_planks
-      - deepslate
+        - stone
+        - oak_planks
+        - deepslate
     armor-stands-do-collision-entity-lookups: true
     nether-ceiling-void-damage-height: 0
     keep-spawn-loaded-range: 10
