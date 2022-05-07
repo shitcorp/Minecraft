@@ -41,7 +41,7 @@ services:
       VANILLATWEAKS_SHARECODE: p70HvM
       COPY_CONFIG_DEST: /data
 
-      TYPE: PAPER
+      TYPE: PUFFERFISH
       EULA: "TRUE"
       SYNC_SKIP_NEWER_IN_DESTINATION: "FALSE"
     ports:
