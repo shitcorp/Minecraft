@@ -1,2 +1,3 @@
 https://media.forgecdn.net/files/3779/782/voicechat-bukkit-1.18.2-2.2.39.jar
 https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/1096/artifact/bootstrap/spigot/target/Geyser-Spigot.jar
+https://www.spigotmc.org/resources/appleskinspigot.97473/download?version=444118
