@@ -54,8 +54,6 @@ services:
     volumes:
       # main volume for mc data
       - "mcdata:/data"
-      # volume for adding plugins
-      - "./plugins:/plugins"
       # extras
       - "./extras:/extras"
       # config
