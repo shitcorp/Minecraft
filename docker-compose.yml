@@ -40,7 +40,7 @@ services:
       # resource pack for Incendium
       # RESOURCE_PACK: https://www.planetminecraft.com/data-pack/incendium-nether-expansion/download/file/15458331/
 
-      MAX_MEMORY: 4G
+      MAX_MEMORY: 6G
       TZ: America/New_York
       ENABLE_ROLLING_LOGS: "TRUE"
       USE_AIKAR_FLAGS: "TRUE"
