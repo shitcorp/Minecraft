@@ -5,5 +5,9 @@
 plugins/
 mc-backups/
 
+# Ignore datapacks' content
+datapacks/*
+!datapacks/.gitkeep
+
 # testing dir
 mcdata/

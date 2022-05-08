@@ -4,7 +4,7 @@ services:
   minecraft:
     # cmd: docker-compose exec minecraft rcon-cli
     image: itzg/minecraft-server
-    restart: always
+    restart: unless-stopped
     tty: true
     stdin_open: true
     environment:
@@ -34,6 +34,11 @@ services:
       MODS_FILE: /extras/plugins.txt
       REMOVE_OLD_MODS: "TRUE"
 
+      DATAPACKS: /datapacks
+      REMOVE_OLD_DATAPACKS: "TRUE"
+      # resource pack for Incendium
+      # RESOURCE_PACK: https://www.planetminecraft.com/data-pack/incendium-nether-expansion/download/file/15458331/
+
       MAX_MEMORY: 2G
       TZ: America/New_York
       ENABLE_ROLLING_LOGS: "TRUE"
@@ -53,11 +58,13 @@ services:
       - "19132:19132/udp"
     volumes:
       # main volume for mc data
-      - "mcdata:/data"
+      - "./mcdata:/data"
       # extras
       - "./extras:/extras"
       # config
       - "./config:/config"
+      # datapacks
+      - "./datapacks:/datapacks"
 
   backups:
     image: itzg/mc-backup
