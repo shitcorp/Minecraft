@@ -66,6 +66,8 @@ services:
       - "./config:/config"
       # datapacks
       - "./datapacks:/datapacks"
+    networks:
+      - web
 
   backups:
     image: itzg/mc-backup
@@ -87,3 +89,8 @@ services:
 
 volumes:
   mcdata:
+
+networks:
+  web:
+    external: true
+    name: web
