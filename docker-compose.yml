@@ -31,6 +31,7 @@ services:
       ICON: https://i.kym-cdn.com/entries/icons/mobile/000/029/223/cover2.jpg
       OVERRIDE_ICON: "TRUE"
 
+      SPIGET_RESOURCES: 97473
       MODS_FILE: /extras/plugins.txt
       REMOVE_OLD_MODS: "TRUE"
 
