@@ -11,6 +11,6 @@ ShitCorp's Minecraft server config
 > Plugins used on the server
 
 - [Simple Voice Chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat)
+- [Chunky](https://www.spigotmc.org/resources/chunky.81534/)
 - [Geyser](https://geysermc.org/)
-- [AppleSkinSpigot](https://www.spigotmc.org/resources/appleskinspigot.97473/)
 - [Dynmap](https://www.spigotmc.org/resources/dynmap%C2%AE.274/)
