@@ -5,9 +5,15 @@
 plugins/
 mc-backups/
 
+# Dont ignore plugin config
+!config/plugins
+
 # Ignore datapacks' content
 datapacks/*
 !datapacks/.gitkeep
 
 # testing dir
 mcdata/
+
+# Ignore env file
+.mariadb.env

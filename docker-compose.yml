@@ -47,6 +47,19 @@ services:
       VANILLATWEAKS_SHARECODE: p70HvM
       COPY_CONFIG_DEST: /data
 
+      # enable env variable replacement
+      REPLACE_ENV_VARIABLES: "TRUE"
+      REPLACE_ENV_DURING_SYNC: "TRUE"
+      # define an optional prefix for your env variables you want to replace
+      ENV_VARIABLE_PREFIX: "CFG_"
+      # and here are the actual variables
+      CFG_DB_HOST: "db"
+      CFG_DB_PORT: "3306"
+      CFG_DB_NAME: "dynmap"
+      CFG_DB_USER: "dynmap"
+      # found in env file
+      # CFG_DB_PASSWORD: ""
+
       TYPE: PAPER
       EULA: "TRUE"
       SYNC_SKIP_NEWER_IN_DESTINATION: "FALSE"
@@ -68,6 +81,11 @@ services:
       - "./datapacks:/datapacks"
     networks:
       - web
+      - database
+    depends_on:
+      - db
+    env_file:
+      - .mariadb.env
     labels:
       - "traefik.enable=true"
 
@@ -100,10 +118,27 @@ services:
     depends_on:
       - minecraft
 
+  db:
+    image: mariadb:10
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: dynmap
+      MARIADB_USER: dynmap
+      MARIADB_AUTO_UPGRADE: "TRUE"
+    volumes:
+      - mariadata:/var/lib/mysql
+    env_file:
+      - .mariadb.env
+    networks:
+      - database
+
 volumes:
   mcdata:
+  mariadata:
 
 networks:
+  database:
   web:
     external: true
     name: web
