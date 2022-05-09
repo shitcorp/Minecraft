@@ -12,5 +12,4 @@ ShitCorp's Minecraft server config
 
 - [Simple Voice Chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat)
 - [Chunky](https://www.spigotmc.org/resources/chunky.81534/)
-- [Geyser](https://geysermc.org/)
 - [Dynmap](https://www.spigotmc.org/resources/dynmap%C2%AE.274/)

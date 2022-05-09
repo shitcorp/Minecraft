@@ -55,8 +55,6 @@ services:
       - "25565:25565"
       # Voice Chat
       - "24454:24454/udp"
-      # Geyser
-      - "19132:19132/udp"
     volumes:
       # main volume for mc data
       - "mcdata:/data"
