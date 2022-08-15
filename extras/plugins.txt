@@ -1,2 +1,5 @@
-https://media.forgecdn.net/files/3779/782/voicechat-bukkit-1.18.2-2.2.39.jar
-https://dev.bukkit.org/projects/dynmap/files/3724063/download
+https://dev.bukkit.org/projects/simple-voice-chat/files/3923224/download
+https://dev.bukkit.org/projects/dynmap/files/3898386/download
+https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar
+https://ci.opencollab.dev/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/build/libs/floodgate-spigot.jar
+

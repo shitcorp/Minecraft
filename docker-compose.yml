@@ -8,7 +8,7 @@ services:
     tty: true
     stdin_open: true
     environment:
-      VERSION: "1.18.2"
+      VERSION: "1.19.2"
       SERVER_NAME: "Not This Shit"
       MOTD: "Ah shit, here we go again"
       # MAX_BUILD_HEIGHT: 256
@@ -70,6 +70,8 @@ services:
       - "24454:24454/udp"
       # dynmap
       - "8123:8123"
+      # bedrock
+      - "19132:19132/udp"
     volumes:
       # main volume for mc data
       - "mcdata:/data"
