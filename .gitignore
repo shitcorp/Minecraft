@@ -17,3 +17,6 @@ mcdata/
 
 # Ignore env file
 .mariadb.env
+
+# docker-compose binary
+docker-compose
