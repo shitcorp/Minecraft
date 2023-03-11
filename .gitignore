@@ -4,6 +4,9 @@
 # Minecraft dirs
 plugins/
 mc-backups/
+mc-data/
+griefed_backup/
+.vscode/
 
 # Dont ignore plugin config
 !config/plugins
